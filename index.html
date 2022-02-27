@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p>This is my website</p>
+  </body>
+</html>
+<script>
+  let body = document.querySelector("body");   // Get body node
+  let h1 = document.querySelector("h1");   // Get h1 node
+  console.log("body.parentElement:");
+  console.log(body.parentElement);   // Get HTML node
+  console.log("body.children:");
+  console.log(body.children);   // Get h1 and p nodes
+  console.log("body.nodeType:");
+  console.log(body.nodeType);   // 1 (an element node)
+  console.log("h1.parentNode:");
+  console.log(h1.parentNode);   // Get body node
+</script>
