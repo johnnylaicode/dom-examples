@@ -9,14 +9,23 @@
   </body>
 </html>
 <script>
-  let body = document.querySelector("body");   // Get body node
-  let h1 = document.querySelector("h1");   // Get h1 node
-  console.log("body.parentElement:");
+  console.log("=== DOM Traversal ===");
+  let body = document.querySelector("body");   // Set to body node
+  let h1 = document.querySelector("h1");   // Set to h1 node
+
+  console.log("body.parentElement:");  // body->html
   console.log(body.parentElement);   // Get HTML node
-  console.log("body.children:");
+
+  console.log("body.children:");  // body->[h1, p]
   console.log(body.children);   // Get h1 and p nodes
-  console.log("body.nodeType:");
+  console.log(body.children[0].textContent);   // Get h1 and p nodes
+
+  console.log("body.nodeType:");  // h1
   console.log(body.nodeType);   // 1 (an element node)
-  console.log("h1.parentNode:");
+
+  console.log("h1.parentNode:");  // h1->body
   console.log(h1.parentNode);   // Get body node
+
+  console.log("h1.parentNode X3:");  // Up 3 levels: h1->body->html->document
+  console.log(h1.parentNode.parentNode.parentNode);   // Get document node
 </script>
