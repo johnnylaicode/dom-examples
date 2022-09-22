@@ -9,23 +9,24 @@
   </body>
 </html>
 <script>
-  console.log("=== DOM Traversal ===");
-  let body = document.querySelector("body");   // Set to get body node
-  let h1 = document.querySelector("h1");   // Set to get h1 node
+  console.log("=== DOM Traversal Examples ===");
+  let body = document.querySelector("body");  // Set to get body node
+  let h1 = document.querySelector("h1");  // Set to get h1 node
 
-  console.log("body.parentElement:");  // body->html
-  console.log(body.parentElement);   // Get HTML node
+  console.log("--- Get body.parentElement ---"); 
+  console.log(body.parentElement);  // Get HTML node (body->html)
 
-  console.log("body.children:");  // body->[h1, p]
-  console.log(body.children);   // Get h1 and p nodes
-  console.log(body.children[0].textContent);   // Get h1 and p nodes
+  console.log("--- Get body.children ---");
+  console.log(body.children);  // Get h1 and p nodes (body->[h1, p])
+  console.log("--- Get body.children[0].textContent ---"); 
+  console.log(body.children[0].textContent);  // Get text content of first child
 
-  console.log("body.nodeType:");  // h1
-  console.log(body.nodeType);   // 1 (an element node)
+  console.log("--- Get body.nodeType ---");
+  console.log(body.nodeType);  // 1 (an element node type)
 
-  console.log("h1.parentNode:");  // h1->body
-  console.log(h1.parentNode);   // Get body node
+  console.log("--- h1.parentNode ---");
+  console.log(h1.parentNode);  // Get body node (h1->body)
 
-  console.log("h1.parentNode X3:");  // Up 3 levels: h1->body->html->document
-  console.log(h1.parentNode.parentNode.parentNode);   // Get document node
+  console.log("--- h1.parentNode going up 3 levels ---"); 
+  console.log(h1.parentNode.parentNode.parentNode);  // Get document node (h1 and going up 3 levels: h1->body->html->document)
 </script>
