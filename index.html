@@ -13,20 +13,29 @@
   let body = document.querySelector("body");  // Set to body node
   let h1 = document.querySelector("h1");  // Set to h1 node
 
-  console.log("--- Get body.parentElement ---"); 
+  console.log("--- Get the body node's parent node,\n including all element nodes within the parent node ---"); 
   console.log(body.parentElement);  // Get HTML node (body->html)
 
-  console.log("--- Get body.children ---");
+  console.log("--- Get a collection of all child nodes of the body node\n returning only child elements (not text and comment nodes) ---");
   console.log(body.children);  // Get h1 and p nodes (body->[h1, p])
-  console.log("--- Get body.children[0].textContent ---"); 
-  console.log(body.children[0].textContent);  // Get text content of first child
+  console.log("--- Get the text content of the first child node ---"); 
+  console.log(body.children[0].textContent);  // Get text content of first child (body->h1)
 
-  console.log("--- Get body.nodeType ---");
+  console.log("--- Get a collection of all child nodes of the body node,\n returning all child nodes (element nodes, text nodes, and comment nodes) ---");
+  console.log(body.childNodes);  // Get a node list (body->node list)
+  console.log(body.childNodes[1].textContent);  // Get text content of the second child node (body->h1)
+
+  console.log("--- Get the type of the body node ---");
   console.log(body.nodeType);  // 1 (an element node type)
 
-  console.log("--- h1.parentNode ---");
+  console.log("--- Get the h1 node's parent node only ---");
   console.log(h1.parentNode);  // Get body node (h1->body)
+  console.log("--- Get the h1 node's parent node at 2 levels up ---"); 
+  console.log(h1.parentNode.parentNode);  // Get document node (from h1 going up 2 levels: h1->body->html)
+  console.log("--- Get the h1 node's parent node at 3 levels up ---"); 
+  console.log(h1.parentNode.parentNode.parentNode);  // Get document node (from h1 going up 3 levels: h1->body->html->document)
 
-  console.log("--- h1.parentNode going up 3 levels ---"); 
-  console.log(h1.parentNode.parentNode.parentNode);  // Get document node (h1 and going up 3 levels: h1->body->html->document)
+  console.log("--- Get a collection of all child nodes of the h1 node ---");
+  console.log(h1.childNodes);  // Get text node (h1->text)
+  console.log(h1.firstChild.textContent);  // Get text content of the text node (h1->text)
 </script>
